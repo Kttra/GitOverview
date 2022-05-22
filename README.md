@@ -164,4 +164,19 @@ debug/
 **Restoring a File to a Previous Version**
 ---------------------
 - ```git restore --source=HEAD~1 file1```
-  - Restore file1 that is located one step back from the head. 
+  - Restore file1 that is located one step back from the head.
+
+**Other Commands**
+------------------
+- ```git checkout master```
+  - Switch to mater branch
+- ```git pull origin master```
+  - Fetches all the code from the remote repo and merges it to the master branch.
+- ```git checkout -b testing```
+  - Create a new branch called testing.
+- ```git add .```
+- ```git commit -m "Added files"```
+- ```git push origin testing```
+  - Pushes the testing branch
+- Creating a pull request
+  - Putting a request that we want to merge the testing branch into the master branch.
