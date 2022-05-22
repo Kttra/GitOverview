@@ -1,4 +1,4 @@
-# Git Info
+# Git Overview
 Git is the most popular version control system in the world. It records changes made to our code over time in a database called a repository. We can look at the project history and see changes made. If something got messed up in the changes, we can revert our project to an earlier state. This is powerful as we can track our history and work together with others.
 
 **Using Git**
