@@ -8,9 +8,9 @@ There are multiple ways we can use git.
 - Code editors & IDE (Ex: VS Code GitLens)
 - Graphical user interfaces (Ex: GirKraken, SourceTree)
 
-**Command Line**
+**Global Settings**
 ----------------
-Why is command line the most popular? GUI tools have limitations. GUI tools are not always available.
+GUI tools have limitations. GUI tools are not always available hence the use of a command line.
 
 - ```git config --global user.name "My Name"```
   - Setting the default user name 
@@ -24,6 +24,10 @@ Why is command line the most popular? GUI tools have limitations. GUI tools are 
   - A command used to change how Git handles line endings (for windows). In window devices, lines end with a carriage returns and line feed. This command makes it so git removes the carriage return character. This is helpful for working with other people with different operating systems.
 - ```git config --global core.autocrlf input```
   - A command used to change how Git handles line endings (for linux or mac). If carriage return is accidentally added to end of lines, git will remove it with this command.
+- ```git config --global diff.tool vscode```
+  - Set VS Code to be our default diff tool.
+- ```git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"```
+  - Tell git how to launch VS Code.
 
 **Creating a Directory**
 -------------------
@@ -45,3 +49,119 @@ Staging is where we propose something for the next commit. When we're done makin
 <p align="center">
 <img src="https://user-images.githubusercontent.com/100814612/169715462-b978ada9-0eb9-4774-8cfa-18fce18d34d1.png"  width = "620", height = "441"><img>
 </p>
+
+**Commit**
+------------------
+A commit contains information on the unique id (revision number), message/edit, date, time, author, and a complete snapshot. Git stores the full content which allows us to quickly restore to a previous snapshot.
+
+**Commands**
+------------------
+- ```git status```
+  - To see the status of the working directory and the staging area.
+- ```git status -s```
+  - Short summary of changes.
+- ```git add file1 file2```
+  - Add specific files to the staging area
+- ```git add *.txt```
+  - Add all .txt files to the staging area
+- ```git add.```
+  - Adds the entire directory recursively.
+- ```git commit -m "Initial commit."```
+  - Commit the changes. The "-m" sends for message.
+- ```git commit```
+  - If you want to add a longer message.
+
+**Skipping the Staging Area (Index Area)**
+-------------
+It is possible to skip the staging area step. Only do this if you are 100% sure that your code and changes don't need to be reviewed.
+
+- ```git commit -a -m "Fixed a bug"```
+  - Commit all modified files.
+- ```git commit -am "Fixed a bug"```
+  - Same as the command above.
+
+**Removing files**
+-------------
+- ```git rm file2.txt```
+  - Remove the file from both the working directory and the staging area.
+- ```git ls-files```
+  - To see the files in our staging area.
+
+**Renaming Files**
+-------------
+- ```git mv main.js file1.js```
+  - Rename the file main.js to file1.js. Applied to both the working directory and staging area.
+
+**Ignoring Files**
+-----------------
+- ```echo logs/ > .gitignore```
+  - Create a file called .gitignore
+- ```code .gitignore```
+  - Open the file with VS Code
+The code below is how the file .gitignore could be formatted. "logs/" indicates a directory named logs. We can list any files and directories we want to ignore in file file.
+```
+logs/
+main.log
+*.log
+bin/
+debug/
+```
+- ```git add .gitignore```
+  - Add the file to our staging area
+- ```git commit -m "Add gitignore"```
+  - Commit
+- ```git rm --cached -r bin/```
+  - Remove bin folder from the staging area. "-r" allows recursive removal and "--cached" means remove only from the staging area.
+
+**Viewing the Staged and Unstaged Changes**
+--------------
+- ```git diff --staged```
+  - See what we have in the staging area that will go to the next commit. Comparing old copies with the newer copies.
+- ```git diff```
+  - See changes in our working directory that are not staged yet.
+- ```git difftool```
+  - Launch our visual diff tool. Compare working directory with what we have in our staging area.
+- ```git difftool --staged```
+  - Launch our visual diff tool. To look at state changes.
+
+  **Viewing History**
+- ```git log```
+  - Shows all the commits we have created. Sorted from the lastest to the earliest. Each commit has a unique identifier, authoer, date/time of commit, and branches.
+  - To go through commit pages, press space. To quit, press q.
+- ```git log --oneline```
+  - Short summary of the commits.
+- ```git log --oneline --reverse```
+  - Reverse order of the short summary of the commits.
+
+**Viewing a Commit**
+---------------
+- ```git show 7e3f```
+  - Referencing a commit.
+- ```git show HEAD```
+  - Show the last commit
+- ```git show HEAD~1```
+  - Show the commit that is one step back from the head.
+- ```git show HEAD~1:bin/log.txt```
+  - Show the exact file that is stored in the commit that was made one step back from the head.
+- ```git ls-tree HEAD~1```
+  - List all the files in the tree.
+- ```git show bafb8```
+  - If you have an object's unique identifier, you can view it by using this command. Replace "bafb8" with the unique identifier.
+
+**Unstaging a File**
+-------------------
+- ```git restore --staged file1```
+  - Unstage file1. Git takes the last copy of file1 from the last snapshot and puts it in the staging area.
+  - If you restore a file that does not previously exist in a previous commit, git will remove the file from the staging area and take it back to its previous state.
+
+**Discarding Local Changes**
+--------------
+- ```git restore file1```
+  - Git takes file1 from our next environment and copy it into our working directory.
+- ```git clean -fd```
+  - Forcibly remove untracked files (also removes untracked whole directories).
+
+**Restoring a File to a Previous Version**
+---------------------
+- ```git restore --source=HEAD~1 file1```
+  - Restore file1 that is located one step back from the head. 
