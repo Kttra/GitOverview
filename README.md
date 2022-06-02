@@ -180,3 +180,29 @@ debug/
   - Pushes the testing branch
 - Creating a pull request
   - Putting a request that we want to merge the testing branch into the master branch.
+
+# Sourcetree Overview
+Sourcetree is a git GUI that offers a visual representation of your repositories that can be obtained from [here](https://www.sourcetreeapp.com/). This section will go over the basics of using it. I will skip over cloning a repository as the steps for that can vary. In the following examples, I will be using a project called Encryption-Testing.
+
+**Layout**
+------------
+Here is an example of how sourcetree looks. On the top we have our basic functions: commit, pull, push, fetch, branch, and merge.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171548581-368269aa-fa55-497e-bb4c-fb8596543df8.png" width = "850", height = "558"><img>
+</p>
+
+**Stage and Commit**
+-------------
+If we make any changes, we can go ahead and stage our file by going to the file status tab under workspace. Then we can stage the file by pressing the "+" icon on the right of the file or pressing stage all if you wish to stage all the files.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171549146-b91ce95a-a3ab-4d3f-bd76-551cd3972517.png" width = "600", height = "544"><img>
+</p>
+
+After staging the file we can press commit on the top left to bring up the commit menu on the bottom. Inside of the textbox we can add in our commit description. Additionally, if there are any files you wish for sourcetree to ignore, you can right click and press on ignore (the file will be added to the gitignore file).
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171549608-0e02c1c5-8f09-4f45-a21a-bca32f50b58d.png" width = "850", height = "558"><img>
+</p>
+
+**Creating a Branch and Merging**
+-------------
