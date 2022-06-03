@@ -180,3 +180,99 @@ debug/
   - Pushes the testing branch
 - Creating a pull request
   - Putting a request that we want to merge the testing branch into the master branch.
+
+**Checkout**
+-----------
+The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on.
+
+**Pull**
+---------
+You can think of git pull as Git's version of svn update. It’s an easy way to synchronize your local repository with upstream changes. The following diagram explains each step of the pulling process.
+
+**Git fetch**
+-----------------
+The git fetch command imports commits from a remote repository into your local repo. The resulting commits are stored as remote branches instead of the normal local branches that we’ve been working with. This gives you a chance to review changes before integrating them into your copy of the project.
+
+# Sourcetree Overview
+Sourcetree is a git GUI that offers a visual representation of your repositories that can be obtained from [here](https://www.sourcetreeapp.com/). This section will go over the basics of using it. I will skip over cloning a repository as the steps for that can vary. In the following examples, I will be using a project called Encryption-Testing.
+
+**Layout**
+------------
+Here is an example of how sourcetree looks. On the top we have our basic functions: commit, pull, push, fetch, branch, and merge.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171548581-368269aa-fa55-497e-bb4c-fb8596543df8.png" width = "850", height = "558"><img>
+</p>
+
+**Stage and Commit**
+-------------
+If we make any changes, we can go ahead and stage our file by going to the file status tab under workspace. Then we can stage the file by pressing the "+" icon on the right of the file or pressing stage all if you wish to stage all the files.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171549146-b91ce95a-a3ab-4d3f-bd76-551cd3972517.png" width = "600", height = "544"><img>
+</p>
+
+After staging the file we can press commit on the top left to bring up the commit menu on the bottom. Inside of the textbox we can add in our commit description. Additionally, if there are any files you wish for sourcetree to ignore, you can right click and press on ignore (the file will be added to the gitignore file).
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171549608-0e02c1c5-8f09-4f45-a21a-bca32f50b58d.png" width = "850", height = "558"><img>
+</p>
+
+**Creating a Branch and Merging**
+-------------
+To create a new branch we press on the branch button on the top toolbar.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171776519-96ccf53d-b859-4875-b22b-629defd93f98.png"><img>
+</p>
+
+A new menu pops up where we can name our branch and decide whether we want to check it out or not. We can also specify which commit we want to branch from (working copy parent is the latest commit).
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171776661-d1930009-873d-4826-90a4-0ea1972244c6.png"><img>
+</p>
+
+On the left we can see that we have switched to our new branch.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171776866-01e4ef2f-716e-4024-89c9-e8b18c9e9464.png"><img>
+</p>
+
+**Deleting a Branch**
+-----------------
+To delete a branch, we have to first make sure we're not on the branch. We can switch to another branch by double clicking on it or right click and selecting checkout. Them to delete the branch, we right click and press on delete.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171777140-8f339349-d193-4bd3-886d-22502e894f6d.png"><img>
+</p>
+
+**Merging a Branch**
+-----------------
+First you want to make sure you're checked in to the master branch or whatever branch you want to merge your target branch into. Next you want to press on merge. A menu will pop up and you get to choose which branch to merge in.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171778561-ed18d5ee-e0df-4c1a-a6bf-8aeb30ba2fcd.png"><img>
+</p>
+
+**Push & Pull Request**
+-----------------------
+After we commit any changes, we can go ahead and push them to our repo by pushing on push.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171778989-c7cc4628-16c0-4229-b0e0-e37d8ab62659.png"><img>
+</p>
+
+After we press on push, a new menu pops up. In this menu we can select which branches to push to our repository.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171779011-f4a3a2d4-053a-4f96-9a95-d3ee00a95e11.png"><img>
+</p>
+
+Now if we want to pull updates from our repository to our local machine, we can press on the pull button.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171779197-bd95e69b-7ec1-4b08-ac48-fa4d8e5e1a53.png"><img>
+</p>
+
+The opposite of pulling would be creating a pull request. A pull request (merge request) is an event that takes place in software development when a contributor/developer is ready to begin the process of merging new code changes with the main project repository. To create one, we right click on the branch we want to create a pull request on and press create pull request.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171779706-1fced305-2fef-4fe1-a3d9-252ee1b66f5b.png"><img>
+</p>
+
