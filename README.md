@@ -231,3 +231,31 @@ To delete a branch, we have to first make sure we're not on the branch. We can s
 <p align="center">
 <img src="https://user-images.githubusercontent.com/100814612/171777140-8f339349-d193-4bd3-886d-22502e894f6d.png"><img>
 </p>
+
+**Merging a Branch**
+-----------------
+First you want to make sure you're checked in to the master branch or whatever branch you want to merge your target branch into. Next you want to press on merge. A menu will pop up and you get to choose which branch to merge in.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171778561-ed18d5ee-e0df-4c1a-a6bf-8aeb30ba2fcd.png"><img>
+</p>
+
+**Push & Pull**
+-----------------------
+After we commit any changes, we can go ahead and push them to our repo by pushing on push.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171778989-c7cc4628-16c0-4229-b0e0-e37d8ab62659.png"><img>
+</p>
+
+After we press on push, a new menu pops up. In this menu we can select which branches to push to our repository.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171779011-f4a3a2d4-053a-4f96-9a95-d3ee00a95e11.png"><img>
+</p>
+
+Now if we want to pull updates from our repository to our local machine, we can press on the pull button.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171779197-bd95e69b-7ec1-4b08-ac48-fa4d8e5e1a53.png"><img>
+</p>
+
+
