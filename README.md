@@ -206,3 +206,28 @@ After staging the file we can press commit on the top left to bring up the commi
 
 **Creating a Branch and Merging**
 -------------
+To create a new branch we press on the branch button on the top toolbar.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171776519-96ccf53d-b859-4875-b22b-629defd93f98.png"><img>
+</p>
+
+A new menu pops up where we can name our branch and decide whether we want to check it out or not. We can also specify which commit we want to branch from (working copy parent is the latest commit).
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171776661-d1930009-873d-4826-90a4-0ea1972244c6.png"><img>
+</p>
+
+On the left we can see that we have switched to our new branch.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171776866-01e4ef2f-716e-4024-89c9-e8b18c9e9464.png"><img>
+</p>
+
+**Deleting a Branch**
+-----------------
+To delete a branch, we have to first make sure we're not on the branch. We can switch to another branch by double clicking on it or right click and selecting checkout. Them to delete the branch, we right click and press on delete.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171777140-8f339349-d193-4bd3-886d-22502e894f6d.png"><img>
+</p>
