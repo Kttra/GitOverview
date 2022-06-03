@@ -181,6 +181,18 @@ debug/
 - Creating a pull request
   - Putting a request that we want to merge the testing branch into the master branch.
 
+**Checkout**
+-----------
+The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on.
+
+**Pull**
+---------
+You can think of git pull as Git's version of svn update. It’s an easy way to synchronize your local repository with upstream changes. The following diagram explains each step of the pulling process.
+
+**Git fetch**
+-----------------
+The git fetch command imports commits from a remote repository into your local repo. The resulting commits are stored as remote branches instead of the normal local branches that we’ve been working with. This gives you a chance to review changes before integrating them into your copy of the project.
+
 # Sourcetree Overview
 Sourcetree is a git GUI that offers a visual representation of your repositories that can be obtained from [here](https://www.sourcetreeapp.com/). This section will go over the basics of using it. I will skip over cloning a repository as the steps for that can vary. In the following examples, I will be using a project called Encryption-Testing.
 
@@ -239,7 +251,7 @@ First you want to make sure you're checked in to the master branch or whatever b
 <img src="https://user-images.githubusercontent.com/100814612/171778561-ed18d5ee-e0df-4c1a-a6bf-8aeb30ba2fcd.png"><img>
 </p>
 
-**Push & Pull**
+**Push & Pull Request**
 -----------------------
 After we commit any changes, we can go ahead and push them to our repo by pushing on push.
 
@@ -258,4 +270,9 @@ Now if we want to pull updates from our repository to our local machine, we can 
 <img src="https://user-images.githubusercontent.com/100814612/171779197-bd95e69b-7ec1-4b08-ac48-fa4d8e5e1a53.png"><img>
 </p>
 
+The opposite of pulling would be creating a pull request. A pull request (merge request) is an event that takes place in software development when a contributor/developer is ready to begin the process of merging new code changes with the main project repository. To create one, we right click on the branch we want to create a pull request on and press create pull request.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/171779706-1fced305-2fef-4fe1-a3d9-252ee1b66f5b.png"><img>
+</p>
 
