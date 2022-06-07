@@ -276,3 +276,14 @@ The opposite of pulling would be creating a pull request. A pull request (merge 
 <img src="https://user-images.githubusercontent.com/100814612/171779706-1fced305-2fef-4fe1-a3d9-252ee1b66f5b.png"><img>
 </p>
 
+**Adding and Removing Tags**
+--------------------
+To add a tag, press the tag button on top. Then type in the name of your tag in the Tag Name textbox. You can either decide to push the tag to your repo on creation or push it later on.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/172280846-700b9435-45b9-4c71-b9cd-995f82f58a19.png"><img>
+</p>
+
+Removing a tag can easily be done by clicking on tag. Then going to the remove tag tab and selecting the tab you want to remove. If you wish to also remove the tag from your repo, leave "remove tag from all remotes" checked.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100814612/172280484-ad75e205-5fa6-41df-a8af-9d2af3ae15aa.png"><img>
+</p>
